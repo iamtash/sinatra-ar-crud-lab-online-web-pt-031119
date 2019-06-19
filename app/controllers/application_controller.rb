@@ -16,9 +16,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/articles' do
-    params[:articles].each do |article|
-      Article.create(article)
-    end
+    @article = Article.create(name: params[:name]), content: params[:content])
 
     @articles = Article.all
     erb :index
