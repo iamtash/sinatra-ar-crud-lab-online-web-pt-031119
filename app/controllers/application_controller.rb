@@ -29,7 +29,6 @@ class ApplicationController < Sinatra::Base
     #erb :index
     #binding.pry
     redirect to "/articles/#{@article.id}"
-    binding.pry
   end
 
   get '/articles' do
